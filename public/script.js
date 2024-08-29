@@ -1,3 +1,5 @@
+const fetch = require("node-fetch");
+
 // Function to get the access token from the URL hash
 function getAccessToken() {
   const hash = window.location.hash.substring(1);
