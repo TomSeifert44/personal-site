@@ -1,7 +1,5 @@
 // netlify/functions/spotify-auth.js
 
-import fetch from "node-fetch";
-
 export async function handler(event, context) {
   const client_id = "bbe174b6bc194beca6ed800b4b9409ea";
   const client_secret = "02d110f9286f4c7892cb5be8c807db69";
