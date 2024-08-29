@@ -190,7 +190,10 @@
     <footer>
       <p>&copy; 2024 Tom Seifert. All rights reserved.</p>
     </footer>
-    <script src="spotify-auth.js"></script>
+    <script type="module">
+      import { authenticate } from './spotify-auth.js';
+      authenticate();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
