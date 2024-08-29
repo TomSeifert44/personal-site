@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tom Seifert - UCLA Statistics & Data Science Student</title>
+    <style>
+      .image-container {
+        position: relative;
+        width: 100%;
+        padding-top: 75%; /* Adjust this percentage to change the aspect ratio (e.g., 75% for 4:3) */
+        overflow: hidden;
+      }
+      .image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2 {
+        margin: 0;
+      }
+      nav {
+        margin: 20px 0;
+      }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #007bff;
+      }
+      section {
+        padding: 20px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .portfolio {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .portfolio-item {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        min-width: 250px;
+      }
+      footer {
+        padding: 5px 10px; /* Small padding */
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 12px; /* Small font size */
+        line-height: 1.4; /* Tighter line spacing */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tom Seifert</h1>
+      <p>UCLA Statistics & Data Science Student</p>
+      <nav>
+        <a href="#about">About Me</a>
+        <a href="#data-science-portfolio">Data Science Portfolio</a>
+        <a href="#art-portfolio">Art Portfolio</a>
+        <a href="#contact">Contact Information</a>
+        <section id="spotify-search">
+          <div class="container">
+            <h2>Add a Song to My Spotify Queue</h2>
+            <input type="text" id="song-query" placeholder="Search for a song..." />
+            <button id="search-button">Search</button>
+            <div id="search-results"></div>
+          </div>
+        </section>
+      </nav>
+    </header>
+    <section id="headshot">
+      <div class="container">
+        <h2>About Me</h2>
+        <div style="text-align: left">
+          <img
+            src="../Desktop/Jobs/Headshot.jpeg"
+            style="width: 25%; height: 50%"
+          />
+        </div>
+        <p>
+          Hello! I'm Tom Seifert, a Statistics & Data Science student at UCLA. I
+          am passionate about leveraging data to solve complex problems and
+          uncover insights. My background includes extensive experience in data
+          analysis, machine learning, and data visualization. I also have a
+          strong interest in art and design, which fuels my creativity in data
+          presentation and storytelling.
+        </p>
+      </div>
+    </section>
+    </section>
+    <section id="data-science-portfolio">
+      <div class="container">
+        <h2>Data Science Portfolio</h2>
+        <div class="portfolio">
+          <!-- Replace with actual projects -->
+          <div class="portfolio-item">
+            <h3>Project Title</h3>
+            <p>
+              Description of the data science project. Highlight key
+              achievements and technologies used.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <h3>Project Title</h3>
+            <p>
+              Description of the data science project. Highlight key
+              achievements and technologies used.
+            </p>
+          </div>
+          <!-- Add more projects as needed -->
+        </div>
+      </div>
+    </section>
+    <section id="art-portfolio">
+      <div class="container">
+        <h2>Art Portfolio</h2>
+        <div class="portfolio">
+          <!-- Replace with actual art pieces -->
+          <div class="portfolio-item">
+            <h3>Art Piece Title</h3>
+            <div class="image-container">
+              <img
+                src="../Desktop/Art/TomSeifert_YeBears.jpeg"
+                alt="Description of Art Piece 1"
+                style="width: auto; height: 100%"
+              />
+            </div>
+            <p>
+              Description of the art piece. Explain the concept and medium used.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <h3>Art Piece Title</h3>
+            <div class="image-container">
+              <img
+                src="../Desktop/Art/Tom_Scratchsloth copy.jpeg"
+                alt="Description of Art Piece 1"
+                style="width: auto; height: 100%"
+              />
+            </div>
+            <p>
+              Description of the art piece. Explain the concept and medium used.
+            </p>
+          </div>
+          <!-- Add more art pieces as needed -->
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Information</h2>
+        <p>
+          If you’d like to get in touch with me, feel free to reach out via
+          email or connect with me on LinkedIn.
+        </p>
+        <p>Email: <a href="mailto:toms03@icloud.com">toms03@icloud.com</a></p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/tom-seifertt" target="_blank"
+            >www.linkedin.com/in/tom-seifertt</a
+          >
+        </p>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2024 Tom Seifert. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Function to get the access token from the URL hash
+      function getAccessToken() {
+        const hash = window.location.hash.substring(1);
+        const params = new URLSearchParams(hash);
+        return params.get('access_token');
+      }
+    
+      // Use the access token
+      const accessToken = getAccessToken();
+      if (accessToken) {
+        console.log('Access token:', accessToken);
+        // Proceed with using the access token for further API requests
+      } else {
+        console.error('Access token not found.');
+      }
+    
+      document.getElementById('search-button').addEventListener('click', function() {
+        const query = document.getElementById('song-query').value;
+        searchSpotify(query);
+      });
+    
+      function searchSpotify(query) {
+        const url = `https://api.spotify.com/v1/search?q=${encodeURIComponent(query)}&type=track`;
+    
+        fetch(url, {
+          headers: {
+            'Authorization': `Bearer ${accessToken}`
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          displaySearchResults(data.tracks.items);
+        })
+        .catch(error => console.error('Error:', error));
+      }
+    
+      function displaySearchResults(tracks) {
+        const resultsDiv = document.getElementById('search-results');
+        resultsDiv.innerHTML = ''; // Clear previous results
+    
+        tracks.forEach(track => {
+          const trackElement = document.createElement('div');
+          trackElement.className = 'track';
+          trackElement.innerHTML = `
+            <p>${track.name} by ${track.artists.map(artist => artist.name).join(', ')}</p>
+            <button onclick="addToQueue('${track.uri}')">Add to Queue</button>
+          `;
+          resultsDiv.appendChild(trackElement);
+        });
+      }
+    
+      function addToQueue(uri) {
+        const url = `https://api.spotify.com/v1/me/player/queue?uri=${encodeURIComponent(uri)}`;
+    
+        fetch(url, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${accessToken}`
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            alert('Song added to queue!');
+          } else {
+            return response.json().then(errorData => {
+              console.error('Failed to add song to queue:', errorData);
+              alert(`Failed to add song to queue: ${errorData.error.message}`);
+            });
+          }
+        })
+        .catch(error => console.error('Error:', error));
+      }
+    </script>
+  </body>
+</html>
